@@ -19,19 +19,21 @@ public class ControlCenter implements Subject {
 
 	@Override
 	public void register(Observer observer) {
-		// TODO Auto-generated method stub
+		sensors.add((Sensor) observer);
 
 	}
 
 	@Override
 	public void unregister(Observer observer) {
-		// TODO Auto-generated method stub
+		sensors.remove(observer);
 
 	}
 
 	@Override
 	public void notifyObserversChanges() {
-		// TODO Auto-generated method stub
+		for (Sensor sensor : sensors) {
+			sensor.checkSmokeLevel();
+		}
 
 	}
 
