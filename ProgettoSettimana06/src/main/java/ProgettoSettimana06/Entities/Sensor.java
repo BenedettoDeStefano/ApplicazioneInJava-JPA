@@ -20,11 +20,15 @@ public class Sensor implements Observer {
 
 	@Override
 	public void checkSmokeLevel() {
+		String alert = generateAlert();
 		if (this.smokeLevel >= 5) {
-			System.err.println("🚨 ALERT Sensor " + id + " has detected smoke level of " + smokeLevel + ", latitude: "
+			System.out.println("🚨 ALERT Sensor " + id + " has detected smoke level of " + smokeLevel + ", latitude: "
 					+ latitude + " longitude: " + longitude + " 🚨");
-			System.out.println("⚠️ Control Center has sent the notification URL: " + generateAlert() + " ⚠️");
+			System.out.println("⚠️ Control Center has sent the notification URL:" + alert + " ⚠️");
+		} else {
+			System.out.println("Smoke value within limits");
 		}
+
 	}
 
 }
