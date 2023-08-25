@@ -40,7 +40,7 @@ public class ControlCenterTest {
 	public void testInRangeNotification() {
 		sensor1.setSmokeLevel(8);
 		sensor2.setSmokeLevel(1);
-		String expectedMessage = "Smoke value within limits";
+		String expectedMessage = "reports normal smoke";
 		String result = captureConsoleOutput(() -> controlCenter.notifyObserversChanges());
 		assertEquals(true, result.contains(expectedMessage));
     }

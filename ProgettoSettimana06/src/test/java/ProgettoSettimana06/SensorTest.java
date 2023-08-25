@@ -32,7 +32,7 @@ public class SensorTest {
 	@Test
 	public void testNormalSmoke() {
 		sensor.setSmokeLevel(3);
-		String expectedMessage = "Smoke value within limits";
+		String expectedMessage = "reports normal smoke";
 		String result = captureConsoleOutput(() -> sensor.checkSmokeLevel());
 		assertEquals(true, result.contains(expectedMessage));
 	}

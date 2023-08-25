@@ -26,7 +26,8 @@ public class Sensor implements Observer {
 					+ latitude + " longitude: " + longitude + " 🚨");
 			System.out.println("⚠️ Control Center has sent the notification URL:" + alert + " ⚠️");
 		} else {
-			System.out.println("Smoke value within limits");
+			System.out.println("✅ Sensor " + id + " reports normal smoke levels. Current level: " + smokeLevel
+					+ ", latitude: " + latitude + ", longitude: " + longitude + " ✅");
 		}
 
 	}
