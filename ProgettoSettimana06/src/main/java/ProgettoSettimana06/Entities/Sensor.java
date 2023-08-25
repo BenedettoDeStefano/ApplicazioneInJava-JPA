@@ -13,8 +13,14 @@ public class Sensor implements Observer {
 	private String latitude;
 	private String longitude;
 
+	public String generateAlert() {
+		return "http://host/alarm?idsonda=" + id + "&lat=" + latitude + "&lon=" + longitude + "&smokelevel="
+				+ smokeLevel;
+	}
+
 	@Override
 	public void checkSmokeLevel() {
+
 
 	}
 
