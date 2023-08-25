@@ -1,5 +1,5 @@
 package ProgettoSettimana06.Entities;
 
-public class SondaFumo {
+public class ControlCenter {
 
 }
